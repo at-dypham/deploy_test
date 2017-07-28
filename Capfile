@@ -16,7 +16,8 @@ require 'capistrano3/unicorn'
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 #
-# require 'capistrano/rvm'
+require 'capistrano/rvm'
+require 'capistrano/rails'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
 # require 'capistrano/bundler'
