@@ -43,6 +43,9 @@ namespace :deploy do
       #   execute :rake, 'cache:clear'
       # end
     end
+    task :restart do
+      invoke 'unicorn:reload'
+    end
   end
 
 end
