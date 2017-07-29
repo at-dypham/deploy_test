@@ -33,17 +33,15 @@
 #
 # And/or per server (overrides global)
 # ------------------------------------
-set :port, 22
+# set :port, 22
 set :user, 'root'
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :use_sudo, false
-server '45.76.158.224',
-  user: 'root',
-  roles: %w{web app},
-  ssh_options: {
+server '45.76.158.224', user: 'root', roles: %w{web}, primary: true
+set :ssh_options, {
     user: 'root', # overrides user setting above
     # keys: %w(/home/user_name/.ssh/id_rsa),
-    forward_agent: false,
+    forward_agent: true,
     auth_methods: %w(password),
     password: '!4tKTmW1@cFBHKsE'
   }
