@@ -48,4 +48,3 @@ server '45.76.158.224',
     password: '!4tKTmW1@cFBHKsE'
   }
 set :rails_env, :production
-set :conditionally_migrate, true
