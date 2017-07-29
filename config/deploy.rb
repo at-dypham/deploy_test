@@ -49,3 +49,17 @@ namespace :deploy do
   end
 
 end
+
+namespace :unicorn do
+
+  desc 'Start Unicorn'
+  task :start do
+    on roles(:app) do
+      within current_path do
+        puts capture(:env)
+        execute "/etc/init.d/unicorn_#{fetch(:application)} start"
+      end
+    end
+  end
+
+end
