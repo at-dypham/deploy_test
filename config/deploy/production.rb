@@ -37,7 +37,7 @@ set :port, 22
 set :user, 'root'
 set :deploy_via, :remote_cache
 set :use_sudo, false
-server '45.76.158.224', user: 'root', roles: %w{web db}, primary: true
+server '45.76.158.224', user: 'root', roles: %w{web db app}, primary: true
 set :ssh_options, {
     user: 'root', # overrides user setting above
     # keys: %w(/home/user_name/.ssh/id_rsa),
