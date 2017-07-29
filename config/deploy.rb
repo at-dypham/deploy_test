@@ -6,7 +6,7 @@ set :deploy_to, '/root/dypham'
 
 # set :use_sudo, false
 # set :bundle_binstubs, nil
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+set :linked_files, fetch(:linked_files, []).push('/root/dypham/current/config/database.yml', '/root/dypham/current/config/secrets.yml')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 after 'deploy:publishing', 'deploy:restart'
