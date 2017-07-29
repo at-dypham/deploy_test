@@ -33,9 +33,9 @@
 #
 # And/or per server (overrides global)
 # ------------------------------------
-# set :port, 22
+set :port, 22
 set :user, 'root'
-# set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 set :use_sudo, false
 server '45.76.158.224', user: 'root', roles: %w{web db}, primary: true
 set :ssh_options, {
